@@ -1,0 +1,31 @@
+dependencies: \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Base/RCTBatchedBridge.m \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Base/RCTBridge+Private.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Base/RCTBridgeMethod.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Base/RCTDisplayLink.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Executors/RCTJSCExecutor.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Base/RCTJavaScriptExecutor.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Base/RCTModuleData.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Base/RCTPerformanceLogger.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Profiler/RCTProfile.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Modules/RCTRedBox.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Base/RCTErrorCustomizer.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/yanshuli/Desktop/yanShu_Project/workspace/node_modules/react-native/React/Modules/RCTDevLoadingView.h
