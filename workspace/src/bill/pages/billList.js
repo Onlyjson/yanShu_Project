@@ -8,9 +8,8 @@ import {
   Image
 } from 'react-native';
 
-import ProfileView from "./ProfileView";
 
-const circleImage = require("./circle.png");
+const circleImage = require("../../img/circle.png");
 
 export default class LeelaScreen extends Component {
 
@@ -33,9 +32,7 @@ export default class LeelaScreen extends Component {
     return (
       <View style={styles.container}>
 
-        <ProfileView name="Turanga Leela" 
-          imageUrl="https://static.giantbomb.com/uploads/original/0/9493/1485709-leela_8.jpg" 
-          onMore={() => this.onMore()}/>
+
 
       </View>
     );

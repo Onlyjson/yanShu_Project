@@ -9,12 +9,12 @@ import {
 import { TabNavigator, StackNavigator } from "react-navigation";
 
 
-import Index from "./index";
-import IndexDetail from "./indexDetail";
-import BillList from "./billList";
-import BillDetaiil from "./billDetaiil";
-import Mine from "./mine";
-import MineDetail from "./mineDetail";
+import Index from "./index/pages/index";
+import IndexDetail from "./index/pages/indexDetail";
+import BillList from "./bill/pages/billList";
+import BillDetaiil from "./bill/pages/billDetaiil";
+import Mine from "./mine/pages/mine";
+import MineDetail from "./mine/pages/mineDetail";
 
 
 const Tabs = TabNavigator({

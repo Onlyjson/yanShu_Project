@@ -8,9 +8,8 @@ import {
   Image
 } from 'react-native';
 
-import ProfileView from "./ProfileView";
 
-const circleImage = require("./circle.png");
+const circleImage = require("../../img/circle.png");
 
 export default class BenderScreen extends Component {
 
@@ -32,10 +31,6 @@ export default class BenderScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-
-        <ProfileView name="Bender Bending Rodríguez"
-          imageUrl="https://uproxx.files.wordpress.com/2015/12/bender-futurama.jpg?quality=100&w=650"
-          onMore={() => this.onMore()}/>
 
       </View>
     );
