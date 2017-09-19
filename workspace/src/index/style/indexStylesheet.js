@@ -1,9 +1,9 @@
 import {
-    StyleSheet,
     Dimensions,
 } from 'react-native';
-import React, { Component } from 'react';
-const styles1 = StyleSheet.create({
+
+
+export default styles1 = {
     container:{
         backgroundColor:"#fff",
         height:200,
@@ -14,8 +14,4 @@ const styles1 = StyleSheet.create({
         width: Dimensions.get('window').width,
         height: 200,
     }
-});
-
-
-export default class styles extends styles1 {
 }

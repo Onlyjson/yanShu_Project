@@ -17,6 +17,7 @@ import {
 
 const circleImage = require("../../img/circle.png");
 
+import styles from "../style/indexStylesheet";
 
 export default class FryScreen extends Component {
 
@@ -61,18 +62,5 @@ export default class FryScreen extends Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container:{
-        backgroundColor:"#fff",
-        height:200,
-        width:Dimensions.get('window').width
-    },
-    swiper: {},
-    img: {
-        width: Dimensions.get('window').width,
-        height: 200,
-    }
-});
 
 
