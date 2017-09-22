@@ -4,6 +4,7 @@ import {
 
 
 export default styles1 = {
+
     allcontainer:{
         width:Dimensions.get('window').width
     },
@@ -41,11 +42,6 @@ export default styles1 = {
     cell: {
         flex: 1,
         height: 60
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10
     },
     cellfixed: {
         height: 60,

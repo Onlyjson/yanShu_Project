@@ -14,7 +14,8 @@ import {
     ScrollView,
     Animated,
     TouchableHighlight,
-    TouchableOpacity
+    TouchableOpacity,
+    TextInput
 } from 'react-native';
 
 
@@ -26,7 +27,8 @@ import ProfileView from "../../ProfileView";
 
 function StoreItem(props){
     return (
-        <View style={styles.flexContainer}>
+        <TouchableOpacity style={styles.flexContainer} onPress={()=>props.onMore()}>
+        {/*<View style={styles.flexContainer}>*/}
             <View style={styles.cellfixed}>
                 <Image source={props.imgsrc} style={{width:60,height:60,marginLeft:10}}/>
             </View>
@@ -41,7 +43,8 @@ function StoreItem(props){
                     <Text style={{fontSize:10}}>{props.actity}</Text>
                 </View>
             </View>
-        </View>
+        {/*</View>*/}
+        </TouchableOpacity>
     )
 }
 function infoLoad() {
@@ -86,7 +89,9 @@ export default class FryScreen extends Component {
     render() {
         return (
             <View style={styles.allcontainer}>
+
                 <ScrollView>
+
               <View style={styles.container}>
                 <Swiper
                     style={styles.swiper}
@@ -101,6 +106,19 @@ export default class FryScreen extends Component {
                     <Image source={require('../../img/001.jpg')} style={styles.img}/>
                 </Swiper>
                 </View>
+                    <View style={{position:'absolute',top:0,left:0,width:Dimensions.get('window').width}}>
+                        <View style={{flexDirection: 'row'}}>
+                            <View style={{width:30,height:30,backgroundColor:"red"}}>
+
+                            </View>
+                            <View style={{ flex: 1, height: 30}}>
+                                <TextInput style={{flex:1,height:30,backgroundColor:"#fff"}} />
+                            </View>
+                            <View style={{width:30,height:30,backgroundColor:"red"}}>
+
+                            </View>
+                        </View>
+                    </View>
                 <View style={{height:120}}>
                     <View style={{flex: 1, flexDirection: 'row',height:0}}>
                         <IconItem name="美食" imgsrc={iconLoad()} onMore={() => this.onMore('list')}/>
@@ -126,11 +144,11 @@ export default class FryScreen extends Component {
                         </View>
                     </View>
                     <View style={{backgroundColor:'#fff'}}>
-                        <StoreItem imgsrc={infoLoad()} tittle={"家园东北烧烤"} des={"人均¥50"} actity={"满500减60；满200减20"}/>
-                        <StoreItem imgsrc={infoLoad()} tittle={"家园西南烧烤"} des={"人均¥60"} actity={"满500减60；满200减20"}/>
-                        <StoreItem imgsrc={infoLoad()} tittle={"家园西北烧烤"} des={"人均¥70"} actity={"满500减60；满200减20"}/>
-                        <StoreItem imgsrc={infoLoad()} tittle={"家园南北烧烤"} des={"人均¥80"} actity={"满500减60；满200减20"}/>
-                        <StoreItem imgsrc={infoLoad()} tittle={"家园东南烧烤"} des={"人均¥90"} actity={"满500减60；满200减20"}/>
+                        <StoreItem onMore={() => this.onMore('list')} imgsrc={infoLoad()} tittle={"家园东北烧烤"} des={"人均¥50"} actity={"满500减60；满200减20"}/>
+                        <StoreItem onMore={() => this.onMore('list')} imgsrc={infoLoad()} tittle={"家园西南烧烤"} des={"人均¥60"} actity={"满500减60；满200减20"}/>
+                        <StoreItem onMore={() => this.onMore('list')} imgsrc={infoLoad()} tittle={"家园西北烧烤"} des={"人均¥70"} actity={"满500减60；满200减20"}/>
+                        <StoreItem onMore={() => this.onMore('list')} imgsrc={infoLoad()} tittle={"家园南北烧烤"} des={"人均¥80"} actity={"满500减60；满200减20"}/>
+                        <StoreItem onMore={() => this.onMore('list')} imgsrc={infoLoad()} tittle={"家园东南烧烤"} des={"人均¥90"} actity={"满500减60；满200减20"}/>
                     </View>
                 </View>
                 </ScrollView>
