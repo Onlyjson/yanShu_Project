@@ -1,11 +1,11 @@
 
-import React, { Component } from 'react';
+import React, { Component} from 'react';
 import {
   AppRegistry,
   StyleSheet,
   Text,
   View,
-  ScrollView
+  ScrollView,
 } from 'react-native';
 
 
@@ -14,13 +14,16 @@ const BIO_TEXT = "Philip J. Fry I, or simply just Fry, (born August 14, 1974) wa
 
 export default class FryDetailScreen extends Component {
 
+
+
+
   static navigationOptions = {
     title: "首页子页面",
   }
 
   render() {
     return (
-    <view></view>
+    <View></View>
     );
   }
 }

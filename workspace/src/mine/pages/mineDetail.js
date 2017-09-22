@@ -21,9 +21,7 @@ export default class BenderDetailScreen extends Component {
   render() {
     return (
       <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-        
 
-          
       </ScrollView>
     );
   }
