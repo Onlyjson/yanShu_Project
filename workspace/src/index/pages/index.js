@@ -127,10 +127,10 @@ export default class FryScreen extends Component {
                     </View>
                     <View style={{backgroundColor:'#fff'}}>
                         <StoreItem imgsrc={infoLoad()} tittle={"家园东北烧烤"} des={"人均¥50"} actity={"满500减60；满200减20"}/>
-                        <StoreItem imgsrc={infoLoad()} tittle={"家园东北烧烤"} des={"人均¥50"} actity={"满500减60；满200减20"}/>
-                        <StoreItem imgsrc={infoLoad()} tittle={"家园东北烧烤"} des={"人均¥50"} actity={"满500减60；满200减20"}/>
-                        <StoreItem imgsrc={infoLoad()} tittle={"家园东北烧烤"} des={"人均¥50"} actity={"满500减60；满200减20"}/>
-                        <StoreItem imgsrc={infoLoad()} tittle={"家园东北烧烤"} des={"人均¥50"} actity={"满500减60；满200减20"}/>
+                        <StoreItem imgsrc={infoLoad()} tittle={"家园西南烧烤"} des={"人均¥60"} actity={"满500减60；满200减20"}/>
+                        <StoreItem imgsrc={infoLoad()} tittle={"家园西北烧烤"} des={"人均¥70"} actity={"满500减60；满200减20"}/>
+                        <StoreItem imgsrc={infoLoad()} tittle={"家园南北烧烤"} des={"人均¥80"} actity={"满500减60；满200减20"}/>
+                        <StoreItem imgsrc={infoLoad()} tittle={"家园东南烧烤"} des={"人均¥90"} actity={"满500减60；满200减20"}/>
                     </View>
                 </View>
                 </ScrollView>
