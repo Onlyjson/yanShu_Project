@@ -18,19 +18,31 @@ import color from './utils/color'
 // import Splash from './Splash';
 // import Guide from './Guide';
 import MyTab from './MyTab';
-// import Login from './Login';
+import Login from '../app/pages/login/login';
+import SingUp from '../app/pages/login/signup'
 // import SetIP from './SetIP';
 // //import Login from './Login2';
 
 
 const MyApp = StackNavigator({
-    //Splash: {screen: Splash},
-    //这个就是进来的页面
-    MyTab: {screen: MyTab},
+    // Splash: {screen: Splash},
+    // 这个就是进来的页面
+    Login:{screen: Login,
+                navigationOptions:{
+                headerStyle:{height:0}
+         }},
+    SingUp:{screen: SingUp,
+                navigationOptions:{
+                headerTitle:'注册',
+                headerTintColor:'#222',
+                headerStyle:{
+                   backgroundColor:'#fff',
+
+                },
+            }},
+    MyTab: {screen: MyTab}
     // 引导页: {screen: Guide},
     // 登录: {screen: Login},
-    //
-
 }, {
     headerMode: 'screen',
     navigationOptions:{

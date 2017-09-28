@@ -34,6 +34,7 @@ const  MyTab = TabNavigator({
         screen: HOME_PAGE,
         navigationOptions:{
             title: '首页',
+            headerLeft: null,
             tabBarIcon: ({tintColor}) => (
                 <Image
                     source={require('./img/aaaaa.png')}
@@ -45,6 +46,7 @@ const  MyTab = TabNavigator({
         screen: COUPON_PAGE,
         navigationOptions:{
             title: '优惠券',
+            headerLeft: null,
             tabBarIcon: ({tintColor}) => (
                 <Image
                     source={require('./img/aaaaa.png')}
@@ -57,6 +59,7 @@ const  MyTab = TabNavigator({
         screen: ORDER_PAGE,
         navigationOptions:{
             title: '订单',
+            headerLeft: null,
             tabBarIcon: ({tintColor}) => (
                 <Image
                     source={require('./img/aaaaa.png')}
@@ -68,6 +71,7 @@ const  MyTab = TabNavigator({
         screen: MY_PAGE,
         navigationOptions:{
             title: '我的',
+            headerLeft: null,
             tabBarIcon: ({tintColor}) => (
                 <Image
                     source={require('./img/aaaaa.png')}
@@ -98,7 +102,6 @@ const  MyTab = TabNavigator({
         style:{
             backgroundColor: 'white',
             height:49,
-
         },
         //每个box
         tabStyle:{
