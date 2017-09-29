@@ -26,7 +26,7 @@ const MyCarousel = (props) =>  {
     const { onPress } = props;
     return (
         <Carousel
-            autoplayTimeout={2}
+            autoplayTimeout={.5}
             autoplay
             infinite
             dotStyle={styles.dotStyle}

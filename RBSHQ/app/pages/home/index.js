@@ -38,30 +38,10 @@ export default class HOME_PAGE extends Component {
 
 
 
-
-
-
     onPress(title){
         const { navigate } = this.props.navigation;
-        alert(title)
-        // switch (title) {
-        //     case '地主推荐':
-        //         break;
-        //     case '早点小吃':
-        //         break;
-        //     case '外卖':
-        //         break;
-        //     case '烧烤火锅':
-        //         break;
-        //     case '自助餐':
-        //         break;
-        //     case '餐厅':
-        //         break;
-        //     case '统计分析':
-        //         break;
-        //     default :
-        //         break;
-        // }
+        this.props.navigation.navigate('Detail');
+        // alert(title)
 
     }
 }

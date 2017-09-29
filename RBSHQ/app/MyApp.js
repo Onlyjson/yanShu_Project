@@ -20,6 +20,7 @@ import color from './utils/color'
 import MyTab from './MyTab';
 import Login from '../app/pages/login/login';
 import SingUp from '../app/pages/login/signup'
+import Detail from '../app/pages/home/Indexdetails'
 // import SetIP from './SetIP';
 // //import Login from './Login2';
 
@@ -27,6 +28,7 @@ import SingUp from '../app/pages/login/signup'
 const MyApp = StackNavigator({
     // Splash: {screen: Splash},
     // 这个就是进来的页面
+
     Login:{screen: Login,
                 navigationOptions:{
                 headerStyle:{height:0}
@@ -40,6 +42,13 @@ const MyApp = StackNavigator({
 
                 },
             }},
+    Detail:{screen:Detail,navigationOptions:{
+        headerTitle:'注册',
+        headerTintColor:'rgba(0,0,0,0)',
+        headerStyle:{
+            height:0,
+        },
+    }},
     MyTab: {screen: MyTab}
     // 引导页: {screen: Guide},
     // 登录: {screen: Login},

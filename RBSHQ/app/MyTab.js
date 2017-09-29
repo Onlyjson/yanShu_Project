@@ -23,8 +23,8 @@ import { TabNavigator ,TabBarBottom} from 'react-navigation';
 
 const styles = StyleSheet.create({
     tabBarIcon: {
-        height: 22,
-        width:22,
+        height: 20,
+        width:20,
     }
 });
 
@@ -37,7 +37,7 @@ const  MyTab = TabNavigator({
             headerLeft: null,
             tabBarIcon: ({tintColor}) => (
                 <Image
-                    source={require('./img/aaaaa.png')}
+                    source={require('./img/home.png')}
                     style={[styles.tabBarIcon, {tintColor: tintColor}]}
                 />)
         }
@@ -49,7 +49,7 @@ const  MyTab = TabNavigator({
             headerLeft: null,
             tabBarIcon: ({tintColor}) => (
                 <Image
-                    source={require('./img/aaaaa.png')}
+                    source={require('./img/home1.png')}
                     style={[styles.tabBarIcon, {tintColor: tintColor}]}
                 />)
         }
@@ -62,7 +62,7 @@ const  MyTab = TabNavigator({
             headerLeft: null,
             tabBarIcon: ({tintColor}) => (
                 <Image
-                    source={require('./img/aaaaa.png')}
+                    source={require('./img/order.png')}
                     style={[styles.tabBarIcon, {tintColor: tintColor}]}
                 />)
         }
@@ -74,7 +74,7 @@ const  MyTab = TabNavigator({
             headerLeft: null,
             tabBarIcon: ({tintColor}) => (
                 <Image
-                    source={require('./img/aaaaa.png')}
+                    source={require('./img/mine.png')}
                     style={[styles.tabBarIcon, {tintColor: tintColor}]}
                 />
             )
