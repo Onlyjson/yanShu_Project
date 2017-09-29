@@ -31,16 +31,18 @@ const MyApp = StackNavigator({
 
     Login:{screen: Login,
                 navigationOptions:{
-                headerStyle:{height:0}
+                headerStyle:{
+                    height:10,
+                    backgroundColor:'#1aa0f7',
+                }
          }},
     SingUp:{screen: SingUp,
                 navigationOptions:{
                 headerTitle:'注册',
                 headerTintColor:'#222',
-                headerStyle:{
-                   backgroundColor:'#fff',
-
-                },
+                    headerStyle:{
+                        backgroundColor:'#fff',
+                    },
             }},
     Detail:{screen:Detail,navigationOptions:{
         headerTitle:'注册',
@@ -57,7 +59,7 @@ const MyApp = StackNavigator({
     navigationOptions:{
         headerTintColor:'white',
         headerStyle:{
-            backgroundColor:color.theme,
+            backgroundColor:'#1aa0f7',
         },
         headerTitleStyle: {
             alignSelf: 'center'

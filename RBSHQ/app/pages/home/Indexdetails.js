@@ -22,7 +22,77 @@ function IconLeft(props) {
         <Text style={{color:'#fff',fontSize:13}}>{props.val}</Text>
     </View>)
 }
+function star1(index) {
+    if(index==1){
+        return(<View style={[styles.row,{marginTop:9}]}>
+            <Image source={require('../../img/star.png')} style={{width:10.5,height:10,marginLeft:5}}/>
+            <Image source={require('../../img/star_1.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+            <Image source={require('../../img/star_1.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+            <Image source={require('../../img/star_1.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+            <Image source={require('../../img/star_1.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+        </View>)
+    }if(index==2){
+        return(<View style={[styles.row,{marginTop:9}]}>
+            <Image source={require('../../img/star.png')} style={{width:10.5,height:10,marginLeft:5}}/>
+            <Image source={require('../../img/star.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+            <Image source={require('../../img/star_1.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+            <Image source={require('../../img/star_1.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+            <Image source={require('../../img/star_1.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+        </View>)
+    }
+    if(index==3){
+        return(<View style={[styles.row,{marginTop:9}]}>
+            <Image source={require('../../img/star.png')} style={{width:10.5,height:10,marginLeft:5}}/>
+            <Image source={require('../../img/star.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+            <Image source={require('../../img/star.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+            <Image source={require('../../img/star_1.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+            <Image source={require('../../img/star_1.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+        </View>)
+    }
+    if(index==4){
+        return(<View style={[styles.row,{marginTop:9}]}>
+            <Image source={require('../../img/star.png')} style={{width:10.5,height:10,marginLeft:5}}/>
+            <Image source={require('../../img/star.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+            <Image source={require('../../img/star.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+            <Image source={require('../../img/star.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+            <Image source={require('../../img/star_1.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+        </View>)
+    }
+    if(index==5){
+        return(<View style={[styles.row,{marginTop:9}]}>
+            <Image source={require('../../img/star.png')} style={{width:10.5,height:10,marginLeft:5}}/>
+            <Image source={require('../../img/star.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+            <Image source={require('../../img/star.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+            <Image source={require('../../img/star.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+            <Image source={require('../../img/star.png')} style={{width:10.5,height:10,marginLeft:2}}/>
+        </View>)
+    }
+}
+function isLast(obj) {
+    if(obj=="true"){
+        return 0
+    }else{
+        return 0.5
+    }
+}
+function Pingjia(props) {
+    return(<View style={{marginTop:15,flexDirection:"row",marginLeft:15,borderBottomWidth:isLast(props.last),borderBottomColor:"#000",height:80,position:'relative'}}>
+        <View style={[{position:'absolute',right:15,top:0,width:100,height:11},styles.center]}>
+            <Text style={{color:"#999",fontSize:11}}>{props.time}</Text></View>
+        <View style={{width:37,height:37,backgroundColor:'pink',overflow:'hidden',borderRadius:37}}>
 
+        </View>
+        <View style={{flex:1,marginLeft:10}}>
+            <View style={{width:150,height:14}}><Text style={{fontSize:14,color:"#333"}}>{props.tittle}</Text></View>
+            {props.stars}
+            <View style={{marginTop:18}}>
+                <Text>
+                    {props.text}
+                </Text>
+            </View>
+        </View>
+    </View>)
+}
 export default class MY_PAGE extends Component {
 
     goBack(){
@@ -30,7 +100,7 @@ export default class MY_PAGE extends Component {
     }
     render() {
         return (
-            <ScrollView style={{width:dim.width,height:dim.height}}>
+            <ScrollView style={{width:dim.width,height:dim.height,borderTopWidth:0}}>
                 <View style={[{width:dim.width,height:188,backgroundColor:'pink'}]}>
                     <TouchableOpacity style={[{position:'absolute',top:15,left:15}]} onPress={()=>this.goBack()}>
                         <Text>返回</Text>
@@ -99,7 +169,7 @@ export default class MY_PAGE extends Component {
                             </View>
                         </View>
                     </View>
-                    <View style={{height:300,backgroundColor:'#fff',marginTop:16}}>
+                    <View style={{backgroundColor:'#fff',marginTop:16}}>
                         <View style={[{height:40,borderBottomWidth:.5,borderBottomColor:"#000",flexDirection:'row'},styles.center]}>
                             <View style={{width:3,height:9,backgroundColor:'blue',marginLeft:15}}></View>
                             <View style={{flex:10,marginLeft:10}}>
@@ -112,27 +182,15 @@ export default class MY_PAGE extends Component {
                             </View>
                         </View>
                         <View>
-                            <View style={{marginTop:15,flexDirection:"row",marginLeft:15,borderBottomWidth:0.5,borderBottomColor:"#000",height:80}}>
-                                <View style={{width:37,height:37,backgroundColor:'pink',overflow:'hidden',borderRadius:37}}>
-
-                                </View>
-                                <View style={{flex:1,marginLeft:10}}>
-                                    <View><Text style={{fontSize:14,color:"#333"}}>逆风如解意</Text></View>
-                                    <View style={[styles.row,{marginTop:9}]}>
-                                        <Image source={require('../../img/star.png')} style={{width:10.5,height:10,marginLeft:5}}/>
-                                        <Image source={require('../../img/star.png')} style={{width:10.5,height:10,marginLeft:2}}/>
-                                        <Image source={require('../../img/star.png')} style={{width:10.5,height:10,marginLeft:2}}/>
-                                        <Image source={require('../../img/star.png')} style={{width:10.5,height:10,marginLeft:2}}/>
-                                        <Image source={require('../../img/star_1.png')} style={{width:10.5,height:10,marginLeft:2}}/>
-                                    </View>
-                                    <View style={{marginTop:18}}>
-                                        <Text>
-                                            上菜很快,口味适中，比较实惠
-                                        </Text>
-                                    </View>
-                                </View>
-                            </View>
+                            <Pingjia stars={star1(1)} tittle="逆风如解意" text="上菜挺快的" time="2017-09-27"></Pingjia>
+                            <Pingjia stars={star1(2)} tittle="顺丰如解意" text="上菜挺慢的" time="2017-09-28"></Pingjia>
+                            <Pingjia stars={star1(3)} tittle="西风如解意" text="上菜更慢的" time="2017-09-29"></Pingjia>
+                            <Pingjia stars={star1(4)} tittle="北风如解意" text="上菜更慢的" time="2017-09-30"></Pingjia>
+                            <Pingjia stars={star1(5)} tittle="糊了如解意" text="上菜一点也不快的" time="2017-09-31" last="true"></Pingjia>
                         </View>
+                    </View>
+                    <View style={[{height:98,backgroundColor:'#fff'},styles.center]}>
+                        <View style={[{width:93,height:21,borderWidth:1,borderColor:'#1799f6',borderRadius:4},styles.center]}><Text style={{color:'#1799f6',fontSize:12,}}>查看全部评价</Text></View>
                     </View>
                 </View>
             </ScrollView>
