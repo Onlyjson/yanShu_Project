@@ -75,6 +75,7 @@ function isLast(obj) {
         return 0.5
     }
 }
+
 function Pingjia(props) {
     return(<View style={{marginTop:15,flexDirection:"row",marginLeft:15,borderBottomWidth:isLast(props.last),borderBottomColor:"#000",height:80,position:'relative'}}>
         <View style={[{position:'absolute',right:15,top:0,width:100,height:11},styles.center]}>
@@ -96,6 +97,7 @@ function Pingjia(props) {
 export default class MY_PAGE extends Component {
 
     goBack(){
+        alert(this.props.navigation.state.name);
         this.props.navigation.goBack()
     }
     render() {

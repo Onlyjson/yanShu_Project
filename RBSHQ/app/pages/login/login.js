@@ -25,6 +25,14 @@ const styles = StyleSheet.create({
     }
 });
 
+function CenerSign(props) {
+    return(<View style={{alignItems: 'center',justifyContent:'center',opacity:props.opacity}}>
+        <View style={{width:220,height:20,justifyContent: 'center',flexDirection:"row",marginBottom:-10,marginTop:20}}>
+            <Image source={require("../../img/prompt.png")} style={{width:20,height:15}}/>
+            <Text style={{marginLeft:5,fontSize:12,color:'#f48136'}}>账号与密码不匹配,请重新输入</Text>
+        </View>
+    </View>)
+}
 
 let userName = "",
     passWord = "";
@@ -37,15 +45,22 @@ export default class MY_PAGE extends Component {
             text:"",
             sid:"",
             pla:"请输入密码",
-            value:""
+            value:"",
+            opacity:0,
         };
     }
     goIndex() {
         if(userName=="liyanshu"&&passWord=="123456"){
+            this.setState({
+                opacity:0
+            })
              this.props.navigation.navigate('MyTab');
         }
         else{
-            this.props.navigation.navigate('MyTab');
+            this.setState({
+                opacity:1
+            })
+            // this.props.navigation.navigate('MyTab');
         }
     }
     goSinnup(){
@@ -89,7 +104,10 @@ export default class MY_PAGE extends Component {
                         </View>
                     </View>
                 </View>
-                <View style={{justifyContent: 'center',alignItems: 'center',marginTop:34}}>
+                <CenerSign opacity={this.state.opacity}></CenerSign>
+
+                <View style={{justifyContent: 'center',alignItems: 'center',marginTop:14}}>
+
                     <TouchableOpacity onPress={()=>this.goIndex()}>
                         <Image source={require('../../../app/img/button.png')} style={{width:250,height:47}}>
                             <Text style={{backgroundColor:"rgba(0,0,0,0)",width:250,textAlign:'center',marginTop:15.5,color:'#fff'}}>登录</Text>

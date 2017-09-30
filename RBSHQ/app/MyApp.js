@@ -21,6 +21,7 @@ import MyTab from './MyTab';
 import Login from '../app/pages/login/login';
 import SingUp from '../app/pages/login/signup'
 import Detail from '../app/pages/home/Indexdetails'
+import MerchantList from '../app/pages/home/merchantList'
 // import SetIP from './SetIP';
 // //import Login from './Login2';
 
@@ -28,7 +29,17 @@ import Detail from '../app/pages/home/Indexdetails'
 const MyApp = StackNavigator({
     // Splash: {screen: Splash},
     // 这个就是进来的页面
-
+    MerchantList:{
+        screen: MerchantList,
+        navigationOptions:{
+            headerBackTitle:null,
+            headerTintColor:'rgba(0,0,0,0)',
+            headerStyle:{
+                height:10,
+                backgroundColor:'#fff',
+            },
+        }
+    },
     Login:{screen: Login,
                 navigationOptions:{
                 headerStyle:{
@@ -44,8 +55,8 @@ const MyApp = StackNavigator({
                         backgroundColor:'#fff',
                     },
             }},
+
     Detail:{screen:Detail,navigationOptions:{
-        headerTitle:'注册',
         headerTintColor:'rgba(0,0,0,0)',
         headerStyle:{
             height:0,

@@ -40,7 +40,7 @@ export default class HOME_PAGE extends Component {
 
     onPress(title){
         const { navigate } = this.props.navigation;
-        this.props.navigation.navigate('Detail');
+        this.props.navigation.navigate('MerchantList');
         // alert(title)
 
     }
