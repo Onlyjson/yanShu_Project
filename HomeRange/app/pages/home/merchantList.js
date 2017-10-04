@@ -48,7 +48,7 @@ function MerchantList(props) {
                                   }if(item.key=="首"){
                                       color="#21BE9c"
                                   }
-                                  return <IconLeft index={index} fff={props.press} item={item} color={color} icon={item.key} valInfo={item.valInfo} actityNumber={props.infoList.length}></IconLeft>
+                                  return <IconLeft index={index} changeHeight={props.press} item={item} color={color} icon={item.key} valInfo={item.valInfo} actityNumber={props.infoList.length}></IconLeft>
                               }}
                    />
 
@@ -71,7 +71,7 @@ function IconLeft(props) {
                 <Text style={{fontSize:14,color:'#333'}}>{props.valInfo}</Text>
             </Text>
             </View>
-            <TouchableOpacity onPress={()=>props.fff()}>
+            <TouchableOpacity onPress={()=>props.changeHeight()}>
                 <View style={{marginRight:20}}>
                     <Text style={{fontSize:12,color:'#999'}}>{props.actityNumber}个活动</Text>
                 </View>
@@ -172,8 +172,7 @@ export default class MY_PAGE extends React.PureComponent  {
                     {key: '银',valInfo:"银行啦,快来买是不是傻啊"},
                     {key: '赠',valInfo:"赠品啦,快来买是不是傻啊"},
                     {key: '首',valInfo:"首付啦,快来买是不是傻啊"}],
-                actityNumber:3
-            },{
+                actityNumber:3},{
                 bool:1,
                 height:96,
                 key:"3",
@@ -216,14 +215,99 @@ export default class MY_PAGE extends React.PureComponent  {
                     {key: '赠',valInfo:"赠品啦,快来买是不是傻啊"},
                     {key: '首',valInfo:"首付啦,快来买是不是傻啊"}],
                 actityNumber:6
-            }]
+            }],
+            newListItem:[{
+            bool:1,
+            height:96,
+            key:"1",
+            img:"pink",
+            tittle:"家园东北烧烤_1222",
+            range:"350米",
+            starNumber:1,
+            infoList:[{key: '减',valInfo:"减价啦,快来买是不是傻啊"},
+                {key: '折',valInfo:"打折啦,快来买是不是傻啊"},
+                {key: '银',valInfo:"银行啦,快来买是不是傻啊"},
+                {key: '赠',valInfo:"赠品啦,快来买是不是傻啊"}],
+            actityNumber:2
+        },{
+            bool:1,
+            height:96,
+            key:"2",
+            img:"red",
+            tittle:"家园东南烧烤33333",
+            range:"320米",
+            starNumber:2,
+            infoList:[{key: '减',valInfo:"真的减价啦,快来买是不是傻啊"},
+                {key: '折',valInfo:"打折啦,快来买是不是傻啊"},
+                {key: '银',valInfo:"银行啦,快来买是不是傻啊"},
+                {key: '赠',valInfo:"赠品啦,快来买是不是傻啊"},
+                {key: '首',valInfo:"首付啦,快来买是不是傻啊"}],
+            actityNumber:3},{
+            bool:1,
+            height:96,
+            key:"3",
+            img:"black",
+            tittle:"家园西南烧烤_4444",
+            range:"360米",
+            starNumber:3,
+            infoList:[{key: '减',valInfo:"假的减价啦,快来买是不是傻啊"},
+                {key: '折',valInfo:"打折啦,快来买是不是傻啊"},
+                {key: '银',valInfo:"银行啦,快来买是不是傻啊"},
+                {key: '赠',valInfo:"赠品啦,快来买是不是傻啊"},
+                {key: '首',valInfo:"首付啦,快来买是不是傻啊"}],
+            actityNumber:4
+        },
+                {
+            key:"4",
+            bool:1,
+            height:96,
+            img:"red",
+            tittle:"家园西北烧烤_7878",
+            range:"370米",
+            starNumber:4,
+            infoList:[{key: '减',valInfo:"虚的减价啦,快来买是不是傻啊"},
+                {key: '折',valInfo:"打折啦,快来买是不是傻啊"},
+                {key: '银',valInfo:"银行啦,快来买是不是傻啊"},
+                {key: '赠',valInfo:"赠品啦,快来买是不是傻啊"},
+                {key: '首',valInfo:"首付啦,快来买是不是傻啊"}],
+            actityNumber:5
+        },{
+            bool:1,
+            height:96,
+            key:"5",
+            img:"#e5eaf6",
+            tittle:"家园西北烧烤18989",
+            range:"390米",
+            starNumber:5,
+            infoList:[{key: '减',valInfo:"实的减价啦,快来买是不是傻啊"},
+                {key: '折',valInfo:"打折啦,快来买是不是傻啊"},
+                {key: '银',valInfo:"银行啦,快来买是不是傻啊"},
+                {key: '赠',valInfo:"赠品啦,快来买是不是傻啊"},
+                {key: '首',valInfo:"首付啦,快来买是不是傻啊"}],
+            actityNumber:6
+        }]
         };
     }
     goBack(){
         this.props.navigation.goBack()
     }
-
-    fff(item,index){
+    change(){
+        this.setState((state) => {
+            var d = state.newListItem;
+            state.ListItem=d;
+            // var len = state.ListItem[index].infoList.length;
+            // if(state.ListItem[index].bool==1){
+            //     state.ListItem[index].height=state.ListItem[index].height+len*26;
+            //     state.ListItem[index].bool=0;
+            // }else {
+            //     state.ListItem[index].height=state.ListItem[index].height-len*26;
+            //     state.ListItem[index].bool=1;
+            // }
+            // state.height=110;
+            return {state};
+        });
+    }
+    changeHeight(item,index){
         this.setState((state) => {
             var len = state.ListItem[index].infoList.length;
             if(state.ListItem[index].bool==1){
@@ -250,7 +334,7 @@ export default class MY_PAGE extends React.PureComponent  {
                                                   starNumber={item.starNumber}
 
                           actityNumber={item.actityNumber}
-                         press={this.fff.bind(this,item,index)}
+                         press={this.changeHeight.bind(this,item,index)}
                       ></MerchantList>
         </TouchableOpacity>
         )
@@ -259,9 +343,9 @@ export default class MY_PAGE extends React.PureComponent  {
         return (
             <View>
                 <View style={[style_.center,{backgroundColor:'#fff',height:39}]}>
-                    <TouchableOpacity onPress={()=>this.goBack()}>
-                    <View style={{width:40,height:39,position:'absolute',left:15,top:0,justifyContent:'center'}}>
-                        <Text>返回</Text>
+                    <TouchableOpacity onPress={()=>this.goBack()} style={{width:40,height:39,position:'absolute',left:15,top:0,justifyContent:'center'}}>
+                    <View >
+                        <Text style={{color:'#333'}}>返回</Text>
                     </View>
                     </TouchableOpacity>
                     <View style={[{alignItems:'center',justifyContent:'center',backgroundColor:"#eee",width:250,borderRadius:16,overflow:'hidden',height:29}]}>
@@ -274,19 +358,26 @@ export default class MY_PAGE extends React.PureComponent  {
 
                 </View>
                 <View style={[{height:39,backgroundColor:'#fff',flexDirection:"row",borderBottomWidth:1,borderBottomColor:"#999",marginTop:10},style_.center]}>
-
-                    <View style={[{flex:1,height:15,borderRightWidth:1,borderRightColor:"#999"},style_.center]}>
+                    <TouchableOpacity onPress={()=>this.change()} style={[{flex:1,height:15,borderRightWidth:1,borderRightColor:"#999"},style_.center]}>
+                    <View >
                         <Text style={{fontSize:13,color:"#333"}}>全部</Text>
                     </View>
-                    <View style={[{flex:1,height:15,borderRightWidth:1,borderRightColor:"#999"},style_.center]}>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={()=>this.change()} style={[{flex:1,height:15,borderRightWidth:1,borderRightColor:"#999"},style_.center]}>
+                    <View>
                         <Text style={{fontSize:13,color:"#333"}}>距离最近</Text>
                     </View>
-                    <View style={[{flex:1,height:15,borderRightWidth:1,borderRightColor:"#999"},style_.center]}>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={()=>this.change()} style={[{flex:1,height:15,borderRightWidth:1,borderRightColor:"#999"},style_.center]}>
+                    <View>
                         <Text style={{fontSize:13,color:"#333"}}>评价最高</Text>
                     </View>
-                    <View style={[{flex:1,height:15},style_.center]}>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={()=>this.change()} style={[{flex:1,height:15},style_.center]}>
+                    <View>
                         <Text style={{fontSize:13,color:"#333"}}>智能排序</Text>
                     </View>
+                    </TouchableOpacity>
                 </View>
             <ScrollView style={{width:dim.width,height:dim.height-210}}>
                 <FlatList
