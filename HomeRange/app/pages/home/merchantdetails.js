@@ -125,10 +125,13 @@ export default class MY_PAGE extends Component {
                     <View style={[styles.center,{marginTop:7,marginBottom:10}]}><Text style={{fontSize:13,color:'#9d9d9d'}}><Text>人均¥120</Text><Text>|</Text><Text>已售2831</Text></Text></View>
                 </View>
                 <View style={[styles.row,{backgroundColor:'#fff',alignItems:'center',height:50,borderTopWidth:0.5,borderTopColor:'#000'}]}>
+                    <View style={{flex:1,flexDirection:'row'}}>
+
                     <Text style={{marginLeft:15,fontSize:14,color:'#666'}}>地址:</Text><Text style={{fontSize:13,color:'#333'}}>苏州市吴中区月苑街200号</Text>
-                    <View style={[{flex:1,width:49,height:21},styles.row,styles.center]}>
-                        <Image source={require('../../image/xiamgqing/address.png')} style={{width:14.5,height:16,marginRight:10}}/>
-                        <Image source={require('../../image/xiamgqing/phone.png')} style={{width:12,height:12,marginLeft:40}}/>
+                    </View>
+                        <View style={[{width:100,height:21},styles.row,styles.center]}>
+                        <Image source={require('../../image/xiamgqing/address.png')} style={{width:14.5,height:16,marginRight:15}}/>
+                        <Image source={require('../../image/xiamgqing/phone.png')} style={{width:12,height:12,marginLeft:15}}/>
                     </View>
                 </View>
                 <View style={{marginTop:9}}>

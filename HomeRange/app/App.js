@@ -27,6 +27,18 @@ import Login from './pages/login/login';
 import SingUp from './pages/login/signup';
 import Detail from './pages/home/merchantdetails';
 import MerchantList from './pages/home/merchantList';
+//引入更改密码页面
+import Change from './pages/mine/changepassword';
+//引入 个人资料页面
+import Geren from './pages/mine/gerenziliao';
+//  引入设置页面
+import Setting from './pages/mine/setting';
+// 引入收藏页面
+import Shoucang from './pages/mine/shoucang';
+// 引入会员中心页面
+import Vipcenter from './pages/mine/vipcenter';
+// 引入换绑手机
+import Huanbang from './pages/mine/huanbang';
 
 
 const HomeIcon = require('./image/shouye/home@2x.png');
@@ -42,6 +54,7 @@ const MyTab = TabNavigator({
             // StackNavigator 属性部分
             headerTitle:'首页', // 只会设置导航栏文字,
             //header:null, //可以自定义导航条内容，如果需要隐藏可以设置为null
+            headerBackTitle:null,
             headerStyle:{
                 //#24B8FD
                 backgroundColor:'#1aa0f7'
@@ -73,6 +86,7 @@ const MyTab = TabNavigator({
         navigationOptions:({navigation,screenProps}) => ({
 
             headerTitle:'优惠券',
+            headerBackTitle:null,
             headerStyle:{
                 backgroundColor:'#1aa0f7'
             },
@@ -98,6 +112,7 @@ const MyTab = TabNavigator({
         navigationOptions:({navigation,screenProps}) => ({
             headerTitle:'订单',
             //header:null,
+            headerBackTitle:null,
             headerStyle:{
                 backgroundColor:'#1aa0f7'
             },
@@ -122,6 +137,7 @@ const MyTab = TabNavigator({
         screen:Mine,
         navigationOptions:({navigation,screenProps}) => ({
             headerTitle:'我的',
+            headerBackTitle:null,
             //header:null,
             headerStyle:{
                 backgroundColor:'#1aa0f7'
@@ -169,9 +185,10 @@ const MyTab = TabNavigator({
 
 // 初始化StackNavigator
 const MyNav = StackNavigator({
-
+    // 将TabNavigator包裹在StackNavigator里面可以保证跳转页面的时候隐藏tabbar
     Login:{screen: Login,
         navigationOptions:{
+            headerBackTitle:null,
             headerStyle:{
                 height:10,
                 backgroundColor:'#1aa0f7',
@@ -204,6 +221,61 @@ const MyNav = StackNavigator({
             height:0,
         },
     }},
+
+    Huanbang:{screen: Huanbang,
+    navigationOptions:{
+    headerTitle:'换绑手机',
+        headerBackTitle:null,
+        headerTintColor:'#222',
+        headerStyle:{
+        backgroundColor:'#fff',
+    },
+}},
+    Change:{screen: Change,
+        navigationOptions:{
+            headerTitle:'更改密码',
+            headerBackTitle:null,
+            headerTintColor:'#222',
+            headerStyle:{
+                backgroundColor:'#fff',
+            },
+        }},
+    Geren:{screen: Geren,
+        navigationOptions:{
+            headerTitle:'个人资料修改',
+            headerBackTitle:null,
+            headerTintColor:'#222',
+            headerStyle:{
+                backgroundColor:'#fff',
+            },
+        }},
+    Vipcenter:{screen: Vipcenter,
+        navigationOptions:{
+            headerTitle:'会员中心',
+            headerBackTitle:null,
+            headerTintColor:'#222',
+            headerStyle:{
+                backgroundColor:'#fff',
+            },
+        }},
+    Setting:{screen: Setting,
+        navigationOptions:{
+            headerTitle:'设置',
+            headerBackTitle:null,
+            headerTintColor:'#222',
+            headerStyle:{
+                backgroundColor:'#fff',
+            },
+        }},
+    Shoucang:{screen: Shoucang,
+        navigationOptions:{
+            headerTitle:'收藏',
+            headerBackTitle:'返回',
+            headerTintColor:'#222',
+            headerStyle:{
+                backgroundColor:'#fff',
+            },
+        }},
 
     // 将TabNavigator包裹在StackNavigator里面可以保证跳转页面的时候隐藏tabbar
     MyTab:{

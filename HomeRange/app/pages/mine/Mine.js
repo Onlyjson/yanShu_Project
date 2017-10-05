@@ -20,7 +20,8 @@ import {
     // ImageBackground,
     Image,
     Dimensions,
-    PixelRatio
+    PixelRatio,
+    TouchableOpacity
 } from 'react-native';
 
 function isMargin(val){
@@ -33,7 +34,9 @@ function isMargin(val){
 }
 function ListItem(props) {
 
-    return(<View style={[{height:44,backgroundColor:"#fff",flexDirection:"row",marginTop:isMargin(props.tittle)},props.torb]}>
+    return(
+
+        <View style={[{height:44,backgroundColor:"#fff",flexDirection:"row",marginTop:isMargin(props.tittle)},props.torb]}>
         <View style={[{width:44,height:44},styles.center]}>
             <Image source={props.loadIcon} style={{width:14,height:13.5}}/>
         </View>
@@ -61,6 +64,10 @@ function loadIcon(val){
     }
 }
 export default class Mine extends Component {
+    goNext(obj){
+        this.props.navigation.navigate(obj);
+    }
+
     render() {
         return (
             <View>
@@ -69,18 +76,26 @@ export default class Mine extends Component {
                     <View style={[{height:68,backgroundColor:"#fff",position:"absolute",top:81,width:Dimensions.get('window').width},styles.center]}>
                         <Text style={{marginTop:9,fontSize:13,color:'#333'}}>逆风如解意</Text>
                     </View>
+                    <TouchableOpacity onPress={()=>this.goNext('Geren')}>
                     <View style={[styles.center,{position:"absolute",top:34.5,left:Dimensions.get('window').width/2,width:71,marginLeft:-35.5,height:71,overflow:'hidden',borderRadius:71,backgroundColor:"pink"}]}>
                         <Image style={{width:71,height:71,backgroundColor:'pink'}}></Image>
                     </View>
+                    </TouchableOpacity>
                     <Image source={require("../../image/wode/Female.png")} style={{width:16,height:16,position:'absolute',left:Dimensions.get('window').width/2+15,bottom:31}}/>
                 </View>
+                <TouchableOpacity onPress={()=>this.goNext('Shoucang')}>
                 <ListItem tittle="我的收藏" loadIcon={loadIcon("收藏")} torb={styles.borderTop}></ListItem>
+                </TouchableOpacity>
                 <ListItem tittle="我的优惠券" loadIcon={loadIcon("优惠")} torb={styles.borderTop}></ListItem>
+                <TouchableOpacity onPress={()=>this.goNext('Vipcenter')}>
                 <ListItem tittle="会员中心" loadIcon={loadIcon("会员")} torb={styles.borderTop}></ListItem>
+                </TouchableOpacity>
                 <ListItem tittle="客服中心" loadIcon={loadIcon("客服")} torb={styles.borderBottom}></ListItem>
                 <ListItem tittle="商务合作" loadIcon={loadIcon("商务")} torb={styles.borderBottom}></ListItem>
                 <ListItem tittle="关于" loadIcon={loadIcon("关于")}></ListItem>
+                <TouchableOpacity onPress={()=>this.goNext('Setting')}>
                 <ListItem tittle="设置" loadIcon={loadIcon("设置")} torb={styles.borderBottom}></ListItem>
+                </TouchableOpacity>
                 <View style={{height:600,backgroundColor:"#fff"}}>
 
                 </View>
