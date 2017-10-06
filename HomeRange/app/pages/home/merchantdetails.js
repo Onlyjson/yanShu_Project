@@ -98,7 +98,9 @@ function Pingjia(props) {
     </View>)
 }
 export default class MY_PAGE extends Component {
-
+    goPay(){
+        this.props.navigation.navigate('Pay');
+    }
     goBack(){
 
         this.props.navigation.goBack()
@@ -168,9 +170,11 @@ export default class MY_PAGE extends Component {
                                        clearButtonMode={'while-editing'}
                                        style={{paddingLeft:14,fontSize:14,color:'#8a8a8a',height:49,backgroundColor:'#f2f2f2',borderTopLeftRadius:4,borderBottomLeftRadius:4}}/>
                             </View>
+                            <TouchableOpacity onPress={()=>this.goPay()}>
                             <View style={[{width:100,height:49,backgroundColor:'#1aa0f7',borderTopRightRadius:4,borderBottomRightRadius:4},styles.center]}>
                                 <Text style={{color:'#fff',fontSize:16}}>付款</Text>
                             </View>
+                            </TouchableOpacity>
                         </View>
                     </View>
                     <View style={{backgroundColor:'#fff',marginTop:16}}>

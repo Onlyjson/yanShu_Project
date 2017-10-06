@@ -54,18 +54,13 @@ export default class MY_PAGE extends Component {
         };
     }
     goSinnup(){
-        if(this.state.phoneNumber==110){
-            this.setState({
-                opacity:1
-            })
-        }
         if(passWord1!=passWord2){
             this.setState({
                 val:"两次输入的密码不一样,你是不是傻",
                 opacity:1
             })
         }else {
-            this.props.navigation.navigate('MyTab');
+            this.props.navigation.navigate('Login');
         }
     }
     phoneNumber(obj){
@@ -89,7 +84,7 @@ export default class MY_PAGE extends Component {
                         </Text>
                         <TextInput clearButtonMode={'while-editing'}
                                    style={{width:176,height:14,marginLeft:26,fontSize:14}}
-                                   placeholder={"请输入手机号"}
+                                   placeholder={"请输入账号"}
                                    secureTextEntry={false}
                                    onChangeText={(text) => this.phoneNumber(text)}
                         ></TextInput>
@@ -136,7 +131,7 @@ export default class MY_PAGE extends Component {
                 <View style={{justifyContent: 'center',alignItems: 'center',marginTop:17}}>
                     <TouchableOpacity onPress={()=>this.goSinnup()}>
                         <Image source={require('../../image/dengzhuce/button.png')} style={{width:250,height:47}}>
-                            <Text style={{backgroundColor:"rgba(0,0,0,0)",width:250,textAlign:'center',marginTop:15.5,color:'#fff'}}>注册</Text>
+                            <Text style={{backgroundColor:"rgba(0,0,0,0)",width:250,textAlign:'center',marginTop:15.5,color:'#fff'}}>确认</Text>
                         </Image>
                     </TouchableOpacity>
                 </View>

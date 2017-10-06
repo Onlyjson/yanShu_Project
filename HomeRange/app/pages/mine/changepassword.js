@@ -39,19 +39,19 @@ export default class Mine extends Component {
             <View style={[styles.center,styles.row,{height:40}]}>
                 <View style={{borderBottomWidth:1,borderBottomColor:'#f1f1f1',width:200,height:40}}>
                 <TextInput secureTextEntry={true} clearButtonMode={'while-editing'}
-                           style={[{width:200,height:40}]} placeholder='当前密码'></TextInput>
+                           style={[{width:200,height:40,fontSize:14}]} placeholder='当前密码'></TextInput>
                 </View>
             </View>
                 <View style={[styles.center,styles.row,{height:40}]}>
                     <View style={{borderBottomWidth:1,borderBottomColor:'#f1f1f1',width:200,height:40}}>
                         <TextInput secureTextEntry={true} clearButtonMode={'while-editing'}
-                                   style={[{width:200,height:40}]} placeholder='新密码'></TextInput>
+                                   style={[{width:200,height:40,fontSize:14}]} placeholder='新密码'></TextInput>
                     </View>
                 </View>
                 <View style={[styles.center,styles.row,{height:40}]}>
                     <View style={{borderBottomWidth:1,borderBottomColor:'#f1f1f1',width:200,height:40}}>
                         <TextInput secureTextEntry={true} clearButtonMode={'while-editing'}
-                                   style={[{width:200,height:40}]} placeholder='重新输入密码'></TextInput>
+                                   style={[{width:200,height:40,fontSize:14}]} placeholder='重新输入密码'></TextInput>
                     </View>
                 </View>
 

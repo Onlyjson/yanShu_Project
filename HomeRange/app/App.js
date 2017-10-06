@@ -39,7 +39,8 @@ import Shoucang from './pages/mine/shoucang';
 import Vipcenter from './pages/mine/vipcenter';
 // 引入换绑手机
 import Huanbang from './pages/mine/huanbang';
-
+import Pay from './pages/home/pay';
+import Chongzhi from './pages/login/chongzhimm'
 
 const HomeIcon = require('./image/shouye/home@2x.png');
 const CouponsIcon = require('./image/youhuiquan/coupon.png');
@@ -185,7 +186,7 @@ const MyTab = TabNavigator({
 
 // 初始化StackNavigator
 const MyNav = StackNavigator({
-    // 将TabNavigator包裹在StackNavigator里面可以保证跳转页面的时候隐藏tabbar
+
     Login:{screen: Login,
         navigationOptions:{
             headerBackTitle:null,
@@ -221,7 +222,15 @@ const MyNav = StackNavigator({
             height:0,
         },
     }},
-
+    Pay:{screen: Pay,
+        navigationOptions:{
+            headerTitle:'支付',
+            headerBackTitle:null,
+            headerTintColor:'#222',
+            headerStyle:{
+                backgroundColor:'#fff',
+            },
+        }},
     Huanbang:{screen: Huanbang,
     navigationOptions:{
     headerTitle:'换绑手机',
@@ -267,6 +276,16 @@ const MyNav = StackNavigator({
                 backgroundColor:'#fff',
             },
         }},
+    Chongzhi:{screen: Chongzhi,
+        navigationOptions:{
+            headerTitle:'重置密码',
+            headerBackTitle:null,
+            headerTintColor:'#222',
+            headerStyle:{
+                backgroundColor:'#fff',
+            },
+        }},
+
     Shoucang:{screen: Shoucang,
         navigationOptions:{
             headerTitle:'收藏',

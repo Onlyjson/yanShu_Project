@@ -63,6 +63,9 @@ export default class MY_PAGE extends Component {
             // this.props.navigation.navigate('MyTab');
         }
     }
+    goChongzhi(){
+        this.props.navigation.navigate('Chongzhi');
+    }
     goSinnup(){
         this.props.navigation.navigate('SingUp');
     }
@@ -86,7 +89,7 @@ export default class MY_PAGE extends Component {
                     <Text>
                         <Image source={require('../../image/dengzhuce/accountnumber.png')} style={{width:11,height:14,marginTop:4}}/>
                     </Text>
-                    <TextInput clearButtonMode={'while-editing'} style={{width:176,height:14,marginLeft:26}} placeholder='请输入账号'  autoCapitalize="none" onChangeText={(text) => this.onuserName(text)}></TextInput>
+                    <TextInput clearButtonMode={'while-editing'} style={{width:176,height:14,marginLeft:26,fontSize:14}} placeholder='请输入账号'  autoCapitalize="none" onChangeText={(text) => this.onuserName(text)}></TextInput>
                     </View>
                 </View>
                 <View style={{justifyContent: 'center',alignItems: 'center',marginTop:20}}>
@@ -94,14 +97,16 @@ export default class MY_PAGE extends Component {
                     <Text>
                     <Image source={require('../../image/dengzhuce/password.png')} style={{width:11,height:14,marginTop:4}}/>
                     </Text>
-                    <TextInput clearButtonMode={'while-editing'} style={{width:176,height:14,marginLeft:26}} placeholder={this.state.pla} secureTextEntry={true} onChangeText={(text) => this.onpassWord(text)}></TextInput>
+                    <TextInput clearButtonMode={'while-editing'} style={{width:176,height:14,marginLeft:26,fontSize:14}} placeholder={this.state.pla} secureTextEntry={true} onChangeText={(text) => this.onpassWord(text)}></TextInput>
                     </View>
                 </View>
                 <View style={{justifyContent: 'center',alignItems: 'center'}}>
                     <View style={{width:208}}>
+                        <TouchableOpacity onPress={()=>this.goChongzhi()}>
                         <View style={{alignSelf:'flex-end',flexDirection:'row'}}>
                         <Text style={{marginTop:14,color:"#8e8e8e"}}>忘记密码?</Text>
                         </View>
+                        </TouchableOpacity>
                     </View>
                 </View>
                 <CenerSign opacity={this.state.opacity}></CenerSign>
