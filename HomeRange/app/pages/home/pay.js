@@ -160,7 +160,7 @@ export default class Mine extends Component {
 <View style={[styles.center,{marginTop:71}]}>
                 <View style={[{width:328,height:45,backgroundColor:'#fd8237'},styles.center]}>
                     <Text style={{color:'#fff'}}>
-                        确认支付¥170.00
+                        确认支付¥{this.props.navigation.state.params.money}
                     </Text>
                 </View>
 </View>

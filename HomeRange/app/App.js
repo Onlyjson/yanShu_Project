@@ -179,13 +179,13 @@ const MyTab = TabNavigator({
         showIcon:true, // 是否显示图标，默认关闭。
         upperCaseLabel:false, // 是否使标签大写，默认为true。
     }
-
 });
 
 
 
 // 初始化StackNavigator
 const MyNav = StackNavigator({
+
 
     Login:{screen: Login,
         navigationOptions:{
@@ -195,17 +195,7 @@ const MyNav = StackNavigator({
                 backgroundColor:'#1aa0f7',
             }
         }},
-    MerchantList:{
-        screen: MerchantList,
-        navigationOptions:{
-            headerBackTitle:null,
-            headerTintColor:'rgba(0,0,0,0)',
-            headerStyle:{
-                height:10,
-                backgroundColor:'#fff',
-            },
-        }
-    },
+
     SingUp:{screen: SingUp,
         navigationOptions:{
             headerTitle:'注册',
@@ -286,6 +276,15 @@ const MyNav = StackNavigator({
             },
         }},
 
+    MerchantList:{screen: MerchantList,
+    navigationOptions:{
+    headerTitle:'商家列表',
+        headerBackTitle:'返回',
+        headerTintColor:'#222',
+        headerStyle:{
+        backgroundColor:'#fff',
+    },
+}},
     Shoucang:{screen: Shoucang,
         navigationOptions:{
             headerTitle:'收藏',

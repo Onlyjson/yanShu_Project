@@ -98,8 +98,20 @@ function Pingjia(props) {
     </View>)
 }
 export default class MY_PAGE extends Component {
+    //初始化赋值
+    constructor(props){
+        super(props);
+        this.state = {
+            money:"",
+        };
+    }
     goPay(){
-        this.props.navigation.navigate('Pay');
+        this.props.navigation.navigate('Pay',this.state);
+    }
+    money(obj){
+        this.setState({
+            money:obj
+        })
     }
     goBack(){
 
@@ -168,6 +180,7 @@ export default class MY_PAGE extends Component {
                             <View style={{flex:1}}>
                             <TextInput placeholder='请输入付款金额(元)'
                                        clearButtonMode={'while-editing'}
+                                       onChangeText={(text) => this.money(text)}
                                        style={{paddingLeft:14,fontSize:14,color:'#8a8a8a',height:49,backgroundColor:'#f2f2f2',borderTopLeftRadius:4,borderBottomLeftRadius:4}}/>
                             </View>
                             <TouchableOpacity onPress={()=>this.goPay()}>

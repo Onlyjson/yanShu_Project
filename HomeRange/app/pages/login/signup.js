@@ -43,7 +43,6 @@ let userName = "",
     passWord1 = "",
     passWord2="";
 export default class MY_PAGE extends Component {
-
     //初始化赋值
     constructor(props){
         super(props);
