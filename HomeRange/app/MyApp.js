@@ -54,14 +54,16 @@ import Shangjia from './pages/bussiss/shangjia'
 
 const MyApp = StackNavigator({
 
-    Shangjia:{screen:Shangjia},
+
 
     启动页: { screen: QiDongYe },//启动页
+
     引导页: { screen: YinDaoYe },//引导页
     // 引导页: { screen: MyYinDaoYe },//引导页
     //
     // //这个就是进来的页面
     // MyTab:{screen:ZhiFu},
+    Shangjia:{screen:Shangjia},
     MyTab: {screen: MyTab,navigationOptions:{
         headerTintColor:'white',
         headerStyle:{
